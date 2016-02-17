@@ -1,0 +1,132 @@
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+	color: white;
+}
+
+ul { list-style: none; display: block;}
+li { display: inline; margin-right: 10px;}
+a { color: white; text-decoration: none; }
+
+h1 {
+	margin: 40px 0 0 40px;
+	font-size: 80px;
+}
+
+.preloader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 999999;
+}
+
+.section {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: grey;
+}
+
+.portfolio a {
+	display: inline-block;
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin: 20px 20px 0 40px;
+	background-color: white;
+	color: black;
+}
+
+.project a {
+	position: absolute;
+	margin-top: -20px;
+	margin-left: 40px;
+}
+
+/* ANIMATIONS */
+
+
+@-webkit-keyframes transition-in { 
+	from { -webkit-transform: translateY(100%); }
+	to { -webkit-transform: translateY(0); }
+}
+@-moz-keyframes transition-in { 
+	from { -moz-transform: translateY(100%); }
+	to { -moz-transform: translateY(0); }
+}
+@-o-keyframes transition-in { 
+	from { -o-transform: translateY(100%); }
+	to { -o-transform: translateY(0); }
+}
+@-keyframes transition-in { 
+	from { transform: translateY(100%); }
+	to { transform: translateY(0); }
+}
+
+.section-in {
+	-webkit-animation-name: transition-in;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+
+	-moz-animation-name: transition-in;
+	-moz-animation-duration: 1s;
+	-moz-animation-direction: alternate;
+	-moz-animation-timing-function: ease-in-out;
+
+	-o-animation-name: transition-in;
+	-o-animation-duration: 1s;
+	-o-animation-direction: alternate;
+	-o-animation-timing-function: ease-in-out;
+
+	animation-name: transition-in;
+	animation-duration: 1s;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;	
+}
+
+@-webkit-keyframes transition-out { 
+	from { opacity: 1; -webkit-transform: scale(1); }
+	to { opacity: 0.5; -webkit-transform: scale(0); }
+}
+@-moz-keyframes transition-out { 
+	from { opacity: 1; -moz-transform: scale(1); }
+	to { opacity: 0.5; -moz-transform: scale(0); }
+}
+@-o-keyframes transition-out { 
+	from { opacity: 1; -o-transform: scale(1); }
+	to { opacity: 0.5; -o-transform: scale(0); }
+}
+@-keyframes transition-out { 
+	from { opacity: 1; transform: scale(1); }
+	to { opacity: 0.5; transform: scale(0); }
+}
+
+.section-out {
+	-webkit-animation-name: transition-out;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+
+	-moz-animation-name: transition-out;
+	-moz-animation-duration: 1s;
+	-moz-animation-direction: alternate;
+	-moz-animation-timing-function: ease-in-out;
+
+	-o-animation-name: transition-out;
+	-o-animation-duration: 1s;
+	-o-animation-direction: alternate;
+	-o-animation-timing-function: ease-in-out;
+
+	animation-name: transition-out;
+	animation-duration: 1s;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}

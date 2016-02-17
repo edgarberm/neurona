@@ -1,0 +1,54 @@
+
+
+# html5 pushstate (history) support OLD:
+# <ifModule mod_rewrite.c>
+
+    # Options +FollowSymlinks
+    # RewriteEngine On
+
+    # Trailing sash at the end
+    # https://techjourney.net/add-trailing-slash-to-the-end-of-the-url-with-htaccess-rewrite-rules/
+
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteCond %{REQUEST_URI} !index
+    # RewriteRule (.*) index.html [L]
+
+	# Disable Automatic Directory detection
+	# DirectorySlash Off
+
+	# Hide extension
+	# RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# </ifModule>
+
+
+
+# html5 pushstate (history) support:
+<IfModule mod_rewrite.c>
+  # Activar RewriteEngine
+  RewriteEngine on
+  RewriteBase /es/
+  # RewriteCond %{SCRIPT_FILENAME} !-d
+  RewriteCond %{SCRIPT_FILENAME} !-f
+
+  # Sea cual sea la url introducida por el usuario vamos a llevarlo al index
+  # donde Neurona se encargará de leerla y enrutarla. Al capturar sólo palabras
+  # completas sin barra, podrá cargar de /secciones sin problema.
+
+  RewriteRule ([\w]+) index.html [L]
+
+  # no permitir que se lea reservas.txt
+  <Files "reservas.txt">
+    Order Allow,Deny
+    Deny from all
+  </Files>
+
+  # Reescribir la URL solicitada por el usuario
+  # RewriteRule ^(([a-z0-9\-]+/)*[a-z0-9\-]+)$ $1.html [NC,L]
+
+  # añade la barra del final por si se pierde o no la ponen
+  # RewriteRule ^(([a-z0-9\-]+/)*[a-z0-9\-]+)$ $1/ [NC,R=301,L]
+
+  # no rula y ya no se que mas probar
+</IfModule>
