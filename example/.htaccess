@@ -28,7 +28,6 @@
 <IfModule mod_rewrite.c>
   # Activar RewriteEngine
   RewriteEngine on
-  RewriteBase /es/
   # RewriteCond %{SCRIPT_FILENAME} !-d
   RewriteCond %{SCRIPT_FILENAME} !-f
 
@@ -38,11 +37,6 @@
 
   RewriteRule ([\w]+) index.html [L]
 
-  # no permitir que se lea reservas.txt
-  <Files "reservas.txt">
-    Order Allow,Deny
-    Deny from all
-  </Files>
 
   # Reescribir la URL solicitada por el usuario
   # RewriteRule ^(([a-z0-9\-]+/)*[a-z0-9\-]+)$ $1.html [NC,L]
@@ -50,5 +44,4 @@
   # añade la barra del final por si se pierde o no la ponen
   # RewriteRule ^(([a-z0-9\-]+/)*[a-z0-9\-]+)$ $1/ [NC,R=301,L]
 
-  # no rula y ya no se que mas probar
 </IfModule>
