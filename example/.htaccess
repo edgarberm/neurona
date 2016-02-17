@@ -1,29 +1,5 @@
 
 
-# html5 pushstate (history) support OLD:
-# <ifModule mod_rewrite.c>
-
-    # Options +FollowSymlinks
-    # RewriteEngine On
-
-    # Trailing sash at the end
-    # https://techjourney.net/add-trailing-slash-to-the-end-of-the-url-with-htaccess-rewrite-rules/
-
-    # RewriteCond %{REQUEST_FILENAME} !-f
-    # RewriteCond %{REQUEST_FILENAME} !-d
-    # RewriteCond %{REQUEST_URI} !index
-    # RewriteRule (.*) index.html [L]
-
-	# Disable Automatic Directory detection
-	# DirectorySlash Off
-
-	# Hide extension
-	# RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
-# </ifModule>
-
-
-
 # html5 pushstate (history) support:
 <IfModule mod_rewrite.c>
   # Activar RewriteEngine
