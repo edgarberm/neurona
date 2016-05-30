@@ -30,7 +30,7 @@
     "url": "git+https://github.com/builtbyedgar/neurona.git"
   },
   "scripts": {
-    "prepublish": "babel src -d lib/index.js"
+    "compile": "babel src --out-file lib/index.js"
   },
   "bugs": {
     "url": "https://github.com/builtbyedgar/neurona/issues"
