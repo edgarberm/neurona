@@ -17,10 +17,12 @@ different 'pages'. :+1:
 You also need to set up a `.htaccess` file for Apache servers.
 
 
+## Example
 You can see **Neurona** in action [here](http://builtbyedgar.com/lab/neuronajs/example/).
 
 
 ## Todo
 - [ ] Publish to NPM
-- [ ] Finish example
-- [ ] Write docs
+- [ ] Finish basic example
+- [ ] Create complex example
+- [ ] Write more info and doc
