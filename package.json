@@ -30,8 +30,8 @@
     "url": "git+https://github.com/builtbyedgar/neurona.git"
   },
   "scripts": {
-    "toumd": "babel src --out-file lib/index.js",
-    "tocommonjs": "babel src --plugins transform-es2015-modules-commonjs lib/neuronajs.js"
+    "tobrowser": "babel src --out-file lib/neuronajs.js",
+    "tonpm": "babel src --plugins transform-es2015-modules-umd --out-file lib/index.js"
   },
   "bugs": {
     "url": "https://github.com/builtbyedgar/neurona/issues"
@@ -39,10 +39,6 @@
   "babel": {
     "presets": [
       "es2015"
-    ],
-    "plugins": [
-      "transform-es2015-modules-umd",
-      "transform-es2015-modules-commonjs"
     ]
   },
   "dependencies": {},
@@ -50,6 +46,7 @@
     "babel-cli": "^6.9.0",
     "babel-core": "^6.5.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.8.0",
+    "babel-plugin-transform-es2015-modules-umd": "^6.8.0",
     "babel-preset-es2015": "^6.9.0"
   }
 }
