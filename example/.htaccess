@@ -1,23 +1,7 @@
-
-
 # html5 pushstate (history) support:
-<IfModule mod_rewrite.c>
-  # Activar RewriteEngine
-  RewriteEngine on
-  # RewriteCond %{SCRIPT_FILENAME} !-d
-  RewriteCond %{SCRIPT_FILENAME} !-f
-
-  # Sea cual sea la url introducida por el usuario vamos a llevarlo al index
-  # donde Neurona se encargará de leerla y enrutarla. Al capturar sólo palabras
-  # completas sin barra, podrá cargar de /secciones sin problema.
-
-  RewriteRule ([\w]+) index.html [L]
-
-
-  # Reescribir la URL solicitada por el usuario
-  # RewriteRule ^(([a-z0-9\-]+/)*[a-z0-9\-]+)$ $1.html [NC,L]
-
-  # añade la barra del final por si se pierde o no la ponen
-  # RewriteRule ^(([a-z0-9\-]+/)*[a-z0-9\-]+)$ $1/ [NC,R=301,L]
-
-</IfModule>
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !\.(js|css|gif|jpg|jpeg|png|ico|swf|pdf|html|php|json)$
+    RewriteCond %{REQUEST_URI} !^index
+    RewriteRule (.*) index.html [L]
+</ifModule>

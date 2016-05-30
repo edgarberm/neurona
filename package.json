@@ -4,7 +4,7 @@
   "description": "NeuronaJS is an HTML5 router that focusing on transitions between pages.",
   "homepage": "https://github.com/builtbyedgar/neurona",
   "license": "MIT",
-  "main": "bin/neurona.js",
+  "main": "lib/index.js",
   "keywords": [
     "neurona",
     "router",
@@ -30,7 +30,7 @@
     "url": "git+https://github.com/builtbyedgar/neurona.git"
   },
   "scripts": {
-    "prepublish": "babel src/neurona.js --out-file bin/neurona.js"
+    "prepublish": "babel src -d lib/index.js"
   },
   "bugs": {
     "url": "https://github.com/builtbyedgar/neurona/issues"
@@ -38,12 +38,15 @@
   "babel": {
     "presets": [
       "es2015"
+    ],
+    "plugins": [
+      "transform-es2015-modules-umd"
     ]
   },
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.5.1",
+    "babel-cli": "^6.9.0",
     "babel-core": "^6.5.1",
-    "babel-preset-es2015": "^6.5.0"
+    "babel-preset-es2015": "^6.9.0"
   }
 }

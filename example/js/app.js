@@ -75,7 +75,7 @@ neurona.when('/bio', 'bio.html', function () {
 
 // PROJECT
 // Podemos sacar el controlador
-neurona.when('/portfolio/:params', 'portfolio/project.html', proyectsCtrl);
+neurona.when('/portfolio/:params', 'portfolios/project.html', proyectsCtrl);
 
 function proyectsCtrl (id) {
 
